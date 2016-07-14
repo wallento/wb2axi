@@ -1,0 +1,7 @@
+*~
+tbench/xsim/blk_mem_gen_0.xml
+tbench/xsim/blk_mem_gen_v*
+tbench/xsim/project_1/
+tbench/xsim/sim
+tbench/xsim/*.jou
+tbench/xsim/*.log
