@@ -82,7 +82,7 @@ module wb2axi
    assign m_axi_awid = AXI_ID;
    assign m_axi_awaddr = wb_adr_i;
    assign m_axi_awlen = 0;
-   assign m_axi_awsize = DATA_WIDTH >> 4;
+   assign m_axi_awsize = $clog2(DATA_WIDTH) - 3;
    assign m_axi_awburst = 2'b01;
    assign m_axi_awcache = 4'b0000;
    assign m_axi_awprot = 3'b010;
@@ -95,7 +95,7 @@ module wb2axi
    assign m_axi_arid = AXI_ID;
    assign m_axi_araddr = wb_adr_i;
    assign m_axi_arlen = 0;
-   assign m_axi_arsize = DATA_WIDTH >> 4;
+   assign m_axi_arsize = $clog2(DATA_WIDTH) - 3;
    assign m_axi_arburst = 2'b01;
    assign m_axi_arcache = 4'b0000;
    assign m_axi_arprot = 3'b010;
